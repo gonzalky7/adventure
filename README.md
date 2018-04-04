@@ -5,7 +5,7 @@ It is an itinerary web application
 
 Clone repo and then:
 
-##development environment setup
+## development environment setup
 ```
 bundle install
 rails db:create:all
@@ -13,7 +13,7 @@ rails db:migrate
 rails g rspec:install
 ```
 
-##testing
+## testing
 ```
 rails g rspec:install
 ```
