@@ -1,7 +1,7 @@
-# README
+# ADVENTURE 
 
 This is a rails application that assumes sqlite database.
-It is an itinerary web application
+It is an itinerary web application. 
 
 Clone repo and then:
 
