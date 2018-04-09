@@ -1,7 +1,8 @@
 require "rails_helper"
 
 RSpec.describe Schedule do
-  it "considers a scheule with no tasks to be done" do
+  
+  it "considers a scheule with no acitivies to be done" do
   schedule = Schedule.new
   expect(schedule.done?).to be_truthy
   end
