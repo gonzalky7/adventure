@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe PointOfInterest do 
-  let (:poi) {PointOfInterest.new("Big Ben", 51.509865, -0.118092)}
+  let (:poi) {PointOfInterest.new("Big Ben", 51.5007, - 0.1246)}
 
   it "knows that a poi should has a name" do
     expect(poi.has_name?).to be_truthy
@@ -16,6 +16,5 @@ RSpec.describe PointOfInterest do
     expect(poi.has_high_tourism?).to eq(1000000)
   end
 
-  
 
 end
