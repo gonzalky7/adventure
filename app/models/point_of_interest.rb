@@ -1,9 +1,9 @@
 class PointOfInterest
   attr_accessor :tourism
-
+  
   def initialize (name, latitude, longitude)
    @coordinates = [latitude, longitude]
-   @tourism = 0
+   @tourism = 100000
   end
 
   def has_name?
@@ -15,7 +15,7 @@ class PointOfInterest
   end
 
   def has_high_tourism?
-    return @tourism = 1000000
+    @tourism
   end
 
 
