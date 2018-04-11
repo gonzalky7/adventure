@@ -1,7 +1,7 @@
 require_relative 'point_of_interest'
 
 class Location
-
+  attr_accessor :points_of_interest
 
   def initialize (name, latitude, longitude)
    @points_of_interest = []

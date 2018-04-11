@@ -5,7 +5,7 @@ RSpec.describe Location do
 
   it "knows a list of points of interest" do
     location.add_point_of_interest("Big Ben")
-    expect(location.get_points_of_interest).not_to be_empty
+    expect(location.points_of_interest).not_to be_empty
   end
 
   it "has latitude-longitude coordinates" do
