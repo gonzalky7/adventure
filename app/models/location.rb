@@ -1,5 +1,7 @@
+require_relative 'point_of_interest'
+
 class Location
-  
+
 
   def initialize (name, latitude, longitude)
    @points_of_interest = []
@@ -10,7 +12,7 @@ class Location
     @points_of_interest
   end
 
-  def set_point_of_interest item
+  def add_point_of_interest item
     @points_of_interest.push(item)
   end
 
