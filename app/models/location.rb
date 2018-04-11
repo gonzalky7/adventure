@@ -1,6 +1,6 @@
 require_relative 'point_of_interest'
 
-class Location
+class Location < ApplicationRecord
   attr_accessor :points_of_interest
 
   def initialize (name, latitude, longitude)
