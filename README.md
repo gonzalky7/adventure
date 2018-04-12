@@ -1,7 +1,7 @@
 # ADVENTURE 
 
 This is a rails application that assumes an sqlite database.
-Adventure is a web-application that allows a user to build an itinerary for travel. The user will be able to create a schedule with locations and each schedule will have activities. 
+Adventure is a web-application that allows a user to build an itinerary for travel. The user will be able to create a schedule with locations, points of interest, and activities.  
 
 
 
