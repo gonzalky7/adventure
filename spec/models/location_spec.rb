@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Location, type: :model do
+RSpec.describe Location do
   let (:location) {Location.new("london", 51.509865, -0.118092)}
 
   it "knows a list of points of interest" do
