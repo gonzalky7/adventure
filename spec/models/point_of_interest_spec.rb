@@ -12,9 +12,4 @@ RSpec.describe PointOfInterest do
     expect(poi.get_coordinates).not_to be_empty
   end
 
-  it "considers a poi with a high tourist visitation (> 1000000)"  do
-    expect(poi.has_high_tourism?).to eq(1000000)
-  end
-
-
 end

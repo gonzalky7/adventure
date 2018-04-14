@@ -12,7 +12,4 @@ class PointOfInterest
   def get_coordinates
     @coordinates
   end
-
-
-
 end
