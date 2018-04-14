@@ -1,5 +1,5 @@
 class PointOfInterest
-  attr_accessor :tourism
+  
   
   def initialize (name, latitude, longitude)
    @coordinates = [latitude, longitude]
