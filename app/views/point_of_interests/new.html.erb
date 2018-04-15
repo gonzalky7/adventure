@@ -5,15 +5,5 @@
 
 	<%= f.label(:name) %>
 	<%= f.text_field(:name) %>
-
-	<%= f.label(:longitude) %>
-	<%= f.text_field(:longitude) %>
-
-	<%= f.label(:latitude) %>
-	<%= f.text_field(:latitude) %>
-	<br />
-	<%= f.label(:description) %>
-	<%= text_area("description") %>
-	<br />
-	<%= f.submit %>
+	<%= f.submit "Create Point Of Interest" %>
 <% end %>
