@@ -19,4 +19,15 @@ ActiveRecord::Schema.define(version: 2018_04_15_215837) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "point_of_interests", force: :cascade do |t|
+    t.integer "location_id"
+    t.string "name"
+    t.integer "logitude"
+    t.integer "latitude"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["location_id"], name: "index_point_of_interests_on_location_id"
+  end
+
 end
