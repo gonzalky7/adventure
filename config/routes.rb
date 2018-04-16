@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :point_of_interests
   resources :locations
 
   get "locations" => "locations#index"

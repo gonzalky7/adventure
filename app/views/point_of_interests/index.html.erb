@@ -1,0 +1,15 @@
+<h1>All Points of Interests</h1>
+<table>
+  <thead>
+    <tr>
+      <td>Point Of Interest Name</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @point_of_interests.each do |poi| %>
+      <tr>
+      <td> <%= poi.name %> </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,15 +1,16 @@
-class PointOfInterest
-  
-  
-  def initialize (name, latitude, longitude)
-   @coordinates = [latitude, longitude]
-  end
+class PointOfInterest < ApplicationRecord
+  belongs_to :location
+  validates :name, presence: true
 
   def has_name?
     true
   end
 
   def get_coordinates
-    @coordinates
+    
+  end
+
+  def has_a_description?
+    true
   end
 end
