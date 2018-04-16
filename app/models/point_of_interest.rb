@@ -7,7 +7,7 @@ class PointOfInterest < ApplicationRecord
   end
 
   def get_coordinates
-    
+
   end
 
   def has_a_description?
