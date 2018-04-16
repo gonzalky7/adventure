@@ -3,7 +3,7 @@ class LocationsController < ApplicationController
     @locations = Location.new
   end
   def index
-    @Locations = Location.all
+    @locations = Location.all
   end
 
   def create
