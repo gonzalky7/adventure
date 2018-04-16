@@ -1,5 +1,6 @@
 class PointOfInterest < ApplicationRecord
-    belongs_to :location
+  belongs_to :location
+  validates :name, presence: true
 
   def has_name?
     true

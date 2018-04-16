@@ -7,6 +7,7 @@ class CreatesPointOfInterest
 
   def build
     self.point_of_interest = PointOfInterest.new(name: name)
+    point_of_interest
   end
 
   def create

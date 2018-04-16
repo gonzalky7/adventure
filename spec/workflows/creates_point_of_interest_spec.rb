@@ -1,13 +1,21 @@
 require "rails_helper"
 
 RSpec.describe CreatesPointOfInterest do
+  let(:creator) {CreatesPointOfInterest.new(name: "Pyramids of Giza")}
 
   describe "initialization" do
   	it "creates a point of interest given a name" do
-  		creator = CreatesPointOfInterest.new(name: "Pyramids of Giza")
   		creator.build
   		expect(creator.point_of_interest.name).to eq("Pyramids of Giza")
   	end
+  end
+
+  describe "failure cases" do
+    it "fails when trying to save a point of interest with no name" do
+      creator = CreatesPointOfInterest.new(name: "")
+      creator.create
+      expect(creator).not_to be_a_success
+    end
   end
 
 end
