@@ -2,18 +2,12 @@ require_relative 'point_of_interest'
 
 class Location
   attr_accessor :points_of_interest
-
-  def initialize (name, latitude, longitude)
-   @points_of_interest = []
-   @coordinates = [latitude, longitude]
-  end
-
-  def get_points_of_interest
-    @points_of_interest
-  end
-
-  def add_point_of_interest item
-    @points_of_interest.push(item)
+  attr_accessor :name
+  attr_accessor :latitude
+  attr_accessor :longitude
+  def initialize ()
+    @points_of_interest = []
+    @coordinates = [latitude, longitude]
   end
 
   def get_coordinates

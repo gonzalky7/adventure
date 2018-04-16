@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_04_15_001654) do
 
   create_table "point_of_interests", force: :cascade do |t|
@@ -21,6 +22,15 @@ ActiveRecord::Schema.define(version: 2018_04_15_001654) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["location_id"], name: "index_point_of_interests_on_location_id"
+=======
+ActiveRecord::Schema.define(version: 2018_04_15_215837) do
+
+  create_table "locations", force: :cascade do |t|
+    t.string "name"
+    t.integer "coordinates"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+>>>>>>> master
   end
 
 end
