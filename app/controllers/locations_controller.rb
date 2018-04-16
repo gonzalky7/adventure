@@ -7,7 +7,7 @@ class LocationsController < ApplicationController
   end
 
   def create
-    @workflow = AddsLocation.new(name: params[:location][:name])
+    @workflow = AddsLocation.new(name: params[:location][:name], latitude: params[:location][:latitude], longitude: params[:location][:longitude])
     @workflow.create
     redirect_to locations_path
   end

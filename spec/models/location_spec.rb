@@ -17,7 +17,7 @@ RSpec.describe Location do
   end
 
   it "has latitude-longitude coordinates" do
-    expect(location.latitude).not_to be_empty
-    expect(location.longitude).not_to be_empty
+    expect(location.latitude).to eq 51.509865
+    expect(location.longitude).to eq -0.118092
   end
 end
