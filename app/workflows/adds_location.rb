@@ -5,6 +5,7 @@ class AddsLocation
   end
   def build
     self.location = Location.new(name: name)
+    location
   end
   def create
     build
