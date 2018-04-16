@@ -13,5 +13,4 @@ class PointOfInterestsController < ApplicationController
     @workflow.create
     redirect_to point_of_interests_path
   end
-
 end
