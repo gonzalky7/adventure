@@ -11,7 +11,6 @@ class PointOfInterestsController < ApplicationController
   def create
     @workflow = CreatesPointOfInterest.new(name: params[:point_of_interest][:name])
     @workflow.create
-    byebug
     redirect_to point_of_interests_path
   end
 
