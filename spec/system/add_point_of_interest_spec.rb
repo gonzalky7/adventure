@@ -6,7 +6,6 @@ RSpec.describe "adding a point of interest", type: :system do
 		fill_in "Name", with: "Giza pyramids"
 		click_on ("Create Point Of Interest")
 		visit point_of_interests_path
-		byebug
 		expect(page).to have_content("Giza pyramids")
 	end
 
