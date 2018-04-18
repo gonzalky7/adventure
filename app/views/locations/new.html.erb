@@ -8,14 +8,14 @@
   <body>
     <h1>New Location</h1>
 <%= form_for(@locations) do |f| %>
-<%= f.label(:name) %>
+<%= f.label(:name, required: true) %>
 <%= f.text_field(:name) %>
 <br />
 <%= f.label(:latitude) %>
-<%= f.text_field(:latitude) %>
+<%= f.text_field(:latitude, required: true) %>
 <br />
 <%= f.label(:longitude) %>
-<%= f.text_field(:longitude) %>
+<%= f.text_field(:longitude, required: true) %>
 <br />
 <%= f.submit("Create Location") %>
 <% end %>

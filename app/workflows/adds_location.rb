@@ -8,7 +8,6 @@ class AddsLocation
 
   def build
     self.location = Location.new(name: @name, latitude: @latitude, longitude: @longitude)
-    
     location
   end
 
