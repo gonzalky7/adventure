@@ -13,7 +13,7 @@ class CreatesPointOfInterest
   def create
     build
     byebug
-    point_of_interest.save!
+    point_of_interest.save
   end
 
 end

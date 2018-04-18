@@ -6,9 +6,6 @@ class PointOfInterest < ApplicationRecord
     true
   end
 
-  def get_coordinates
-
-  end
 
   def has_a_description?
     true
