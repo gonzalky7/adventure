@@ -1,9 +1,7 @@
 require_relative 'point_of_interest'
 
 class Location < ApplicationRecord
-  attr_accessor :name
-  attr_accessor :latitude
-  attr_accessor :longitude
+  
 
   has_many :point_of_interests
 
