@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "adding a point of interest", type: :system do
-	it "allows a user to create a point of interenst" do
+	it "allows a user to create a point of interest" do
 		visit new_point_of_interest_path
 		fill_in "Name", with: "Giza pyramids"
 		click_on ("Create Point Of Interest")
