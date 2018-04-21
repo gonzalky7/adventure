@@ -17,6 +17,7 @@ require "rails_helper"
      fill_in "Latitude", with: 51.509865
      fill_in "Longitude", with: -0.118092
      click_on("Create Location")
-     expect(page).to have_selector("input", :name =>"location[name]")
+     byebug
+     expect(page).to have_current_path new_location_path
    end
  end
