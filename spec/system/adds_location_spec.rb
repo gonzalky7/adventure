@@ -7,8 +7,17 @@ require "rails_helper"
      fill_in "Latitude", with: 51.509865
      fill_in "Longitude", with: -0.118092
      click_on("Create Location")
-     visit projects_path
+     visit locations_path
      expect(page).to have_content("London")
      expect(page).to have_content(51.509865)
+   end
+   it "doesn't allow a user to add a location without a name" do
+     visit new_location_path
+     fill_in "Name", with: ""
+     fill_in "Latitude", with: 51.509865
+     fill_in "Longitude", with: -0.118092
+     click_on("Create Location")
+     byebug
+     expect(page).to have_current_path new_location_path
    end
  end
