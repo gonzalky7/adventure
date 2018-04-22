@@ -1,11 +1,11 @@
 class PointOfInterestsController < ApplicationController
 
-  def index
-    # TODO
-  end
-
   def new
     @point_of_interest = PointOfInterest.new
+  end
+
+  def index
+    @point_of_interests = PointOfInterest.all
   end
 
   def create

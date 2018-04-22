@@ -1,6 +1,7 @@
 class CreatesPointOfInterest
 
   attr_accessor :name, :point_of_interest
+  
   def initialize(name: "")
     @name = name
   end
