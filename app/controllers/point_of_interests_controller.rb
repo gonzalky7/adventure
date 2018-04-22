@@ -9,7 +9,7 @@ class PointOfInterestsController < ApplicationController
   end
 
   def create
-    @workflow = CreatesPointOfInterest.new(name: params[:point_of_interest][:name])
+    @workflow = CreatesPointOfInterest.new(name: params[:point_of_interest][:name],latitude: params[:point_of_interest][:latitude])
     @workflow.create
     if @workflow.success?
       redirect_to point_of_interests_path

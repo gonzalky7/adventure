@@ -3,5 +3,14 @@
 <%= form_for(@point_of_interest) do |f| %>
 	<%= f.label(:name) %>
 	<%= f.text_field(:name) %>
+  <br/>
+  <%= f.label(:latitude) %>
+  <%= f.text_field(:latitude) %>
+  <!-- <br />
+  <%= f.label(:longitude) %>
+  <%= f.text_field(:longitude) %>
+  <br />
+  <%= f.label(:description) %>
+  <%= f.text_area(:description) %> -->
 	<%= f.submit %>
 <% end %>
