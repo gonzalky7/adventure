@@ -4,6 +4,11 @@ class CreatesPointOfInterest
   
   def initialize(name: "")
     @name = name
+    @success = false
+  end
+
+  def success?
+    @success
   end
 
   def build
@@ -13,7 +18,8 @@ class CreatesPointOfInterest
 
   def create
     build
-    point_of_interest.save
+    result = point_of_interest.save
+    @success = result
   end
 
 end
