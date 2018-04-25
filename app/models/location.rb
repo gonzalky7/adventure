@@ -5,6 +5,7 @@ class Location < ApplicationRecord
   validates :longitude, presence: true
   validates :latitude, presence: true
   has_many :point_of_interests
+  has_and_belongs_to_many :itinerary
 
   def get_coordinates
     @coordinates
