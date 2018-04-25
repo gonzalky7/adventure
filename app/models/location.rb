@@ -8,7 +8,7 @@ class Location < ApplicationRecord
   has_and_belongs_to_many :itinerary
 
   def get_coordinates
-    @coordinates
+    @coordinates = {latitude:, longitude: }
   end
 
   def add_point_of_interest(point_of_interest)

@@ -1,3 +1,4 @@
 class Itinerary < ApplicationRecord
-  has_many_and_belong_to_many
+  has_and_belongs_to_many :location
+  def
 end
