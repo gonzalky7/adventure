@@ -1,19 +1,26 @@
 class CreatesPointOfInterest
-  attr_accessor :name, :point_of_interest
 
-  def initialize(name: "")
+  attr_accessor :name, :point_of_interest ,:latitude
+  
+  def initialize(name: "", latitude: "")
     @name = name
+    @latitude = latitude
+    @success = false
+  end
+
+  def success?
+    @success
   end
 
   def build
-    self.point_of_interest = PointOfInterest.new(name: name)
+    self.point_of_interest = PointOfInterest.new(name: name, latitude: latitude)
     point_of_interest
   end
 
   def create
     build
-    byebug
-    point_of_interest.save
+    result = point_of_interest.save
+    @success = result
   end
 
 end

@@ -1,13 +1,7 @@
 class PointOfInterest < ApplicationRecord
-  belongs_to :location
+  belongs_to :location, optional: true 
   validates :name, presence: true
-
-  def has_name?
-    true
-  end
-
-
-  def has_a_description?
-    true
-  end
+  # validates :longitude, presence: true
+   validates :latitude, presence: true
+  # validates :description, presence: true
 end

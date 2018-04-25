@@ -1,7 +1,7 @@
 class PointOfInterestsController < ApplicationController
 
   def new
-    @point_of_interests = PointOfInterest.new
+    @point_of_interest = PointOfInterest.new
   end
 
   def index
@@ -9,9 +9,13 @@ class PointOfInterestsController < ApplicationController
   end
 
   def create
-    @workflow = CreatesPointOfInterest.new(name: params[:point_of_interest][:name])
+    @workflow = CreatesPointOfInterest.new(name: params[:point_of_interest][:name],latitude: params[:point_of_interest][:latitude])
     @workflow.create
-    byebug
-    redirect_to point_of_interests_path
+    if @workflow.success?
+      redirect_to point_of_interests_path
+    else
+      @point_of_interest = @workflow.point_of_interest
+      render :new
+    end
   end
 end
