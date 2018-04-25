@@ -1,6 +1,7 @@
 require "rails_helper"
 
  RSpec.describe "adding a location", type: :system do
+  
    it "allows a user to add a location to their itinerary" do
      visit new_location_path
      fill_in "Name", with: "London"
