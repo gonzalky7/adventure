@@ -31,5 +31,7 @@ RSpec.describe Itinerary do
     
   end
 
-  
+  it "knows what location has the highest rating" do
+    
+  end
 end
