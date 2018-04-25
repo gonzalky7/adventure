@@ -16,6 +16,10 @@ RSpec.describe Itinerary do
     longitude: -0.118092)
   }
   it "knows how to calculate distance between two locations" do
-    # expect (itinerary.distance_to_next_location).to
+     expect (itinerary.distance_to_next_location).should be_within(0.1).of(28.3)
+  end
+
+  it "knows it current location" do
+    
   end
 end
