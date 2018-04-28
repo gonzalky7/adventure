@@ -24,14 +24,17 @@ RSpec.describe Itinerary do
     rating: 1)
   }
   it "knows how to calculate distance between two locations" do
-     expect (itinerary.distance_to_next_location).should be_within(0.1).of(28.3)
+     expect (itinerary.distance_to_next_location).to be_within(0.1).of(28.3)
   end
 
-  it "knows it current location" do
-    
+  it "knows its current location" do
+    itinerary.current_location << location_1
+    expect(itinerary.current_location.name).to eq "London"
   end
 
-  it "knows what location has the highest rating" do
-    
+
+  it "knows its next location" do
+    itinerary.next_location << location_2
   end
+
 end
