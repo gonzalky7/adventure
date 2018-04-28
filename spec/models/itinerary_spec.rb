@@ -85,7 +85,7 @@ RSpec.describe Itinerary do
       expect(locations).to have_overall_rating(16)
     end
 
-
+    
   end
 
 
