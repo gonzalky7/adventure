@@ -26,6 +26,7 @@ RSpec.describe Itinerary do
 
   it "knows its next location" do
     itinerary.next_location << location_2
+    expect(itinerary.current_location.name).to eq "Bath"
   end
 
 end
