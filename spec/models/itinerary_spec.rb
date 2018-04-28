@@ -62,6 +62,7 @@ RSpec.describe Itinerary do
       expect(locations).to be_highest_rating(10)
       expect(locations).not_to be_highest_rating(1)
     end
+
   end
 
 
