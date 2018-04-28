@@ -13,28 +13,35 @@ RSpec.describe Itinerary do
   }
   let (:location_2) { Location.new(
     name: "Bath",
-    latitude: 51.509865,
-    longitude: -0.118092,
+    latitude: 51.3751000,
+    longitude: -2.3617200,
     rating: 5)
   }
   let (:location_3) { Location.new(
-    name: "Bath",
-    latitude: 51.509865,
-    longitude: -0.118092,
+    name: "Kingston",
+    latitude: 51.4123,
+    longitude: -0.3007,
     rating: 1)
   }
   it "knows how to calculate distance between two locations" do
-     expect (itinerary.distance_to_next_location).to be_within(0.1).of(28.3)
+    itinerary.current_location = location_1
+    itinerary.next_location = location_2
+    expect(itinerary.distance_to_next_location).to be_within(1.1).of(97.17)
   end
 
   it "knows its current location" do
-    itinerary.current_location << location_1
+    itinerary.current_location = location_1
     expect(itinerary.current_location.name).to eq "London"
   end
 
   it "knows its next location" do
-    itinerary.next_location << location_2
-    expect(itinerary.current_location.name).to eq "Bath"
+    itinerary.next_location = location_2
+    expect(itinerary.next_location.name).to eq "Bath"
+  end
+
+  it "knows its last location" do
+    itinerary.last_location = location_3
+    expect(itinerary.last_location.name).to eq "Kingston"
   end
 
   describe "ratings" do
