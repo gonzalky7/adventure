@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe Itinerary do
 
   let (:itinerary){ Itinerary.new(
-    name: "England Trip"
+    name: "England Trip",
+    rating: 35
     )}
   let (:location_1) { Location.new(
     name: "London",
@@ -44,7 +45,16 @@ RSpec.describe Itinerary do
     expect(itinerary.last_location.name).to eq "Kingston"
   end
 
+  it "has a rating" do
+    expect(itinerary.rating).to eq 35
+  end
+
   describe "ratings" do
+    let (:itinerary){ Itinerary.new(
+    name: "England Trip",
+    rating: 16
+    )}
+
     let (:location_1) { Location.new(
     name: "London",
     latitude: 51.509865,
@@ -62,14 +72,19 @@ RSpec.describe Itinerary do
       latitude: 51.4123,
       longitude: -0.3007,
       rating: 1)
-    }
-
+    } 
 
     it "knows what location has the highest rating" do
       locations = [location_1, location_2, location_3]
       expect(locations).to be_highest_rating(10)
       expect(locations).not_to be_highest_rating(1)
     end
+
+    it "knows its overall rating from each location" do
+      locations = [location_1, location_2, location_3]
+      expect(locations).to have_overall_rating(16)
+    end
+
 
   end
 
