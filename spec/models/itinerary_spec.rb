@@ -26,7 +26,7 @@ RSpec.describe Itinerary do
   it "knows how to calculate distance between two locations" do
     itinerary.current_location = location_1
     itinerary.next_location = location_2
-    expect(itinerary.distance_to_next_location).to be_within(1.1).of(97.17)
+    expect(itinerary.distance_to_next_location).to be_in_proximity_of(97.17)
   end
 
   it "knows its current location" do
