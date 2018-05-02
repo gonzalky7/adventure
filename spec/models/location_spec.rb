@@ -5,8 +5,7 @@ RSpec.describe Location do
                                          latitude: 51.509865,longitude: -0.118092,
                                          rating: 5)
 
-  let(:big_ben) { PointOfInterest.new(name: "Big Ben")}
-
+  big_ben  = FactoryBot.build( :point_of_interest, name: "Big Ben")
   it "knows a list of points of interest" do
     location.add_point_of_interest(big_ben)
     expect(location.point_of_interests).not_to be_empty
