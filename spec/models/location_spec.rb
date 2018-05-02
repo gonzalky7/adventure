@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Location do
-  let (:location) { Location.new(name: "London",latitude: 51.509865,longitude: -0.118092,
-    rating: 5)
-  }
+  location = FactoryBot.build(:location, name: "London",
+                                         latitude: 51.509865,longitude: -0.118092,
+                                         rating: 5)
 
   let(:big_ben) { PointOfInterest.new(name: "Big Ben")}
 
