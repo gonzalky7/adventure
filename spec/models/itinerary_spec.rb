@@ -16,6 +16,7 @@ RSpec.describe Itinerary do
                                             longitude: -0.3007,
                                             rating: 1)
 
+  let(:the_big_d) {DistanceBigDependancy.new}
   it "knows how to calculate distance between two locations" do
     itinerary.current_location = location_1
     itinerary.next_location = location_2
@@ -51,6 +52,10 @@ RSpec.describe Itinerary do
   it "knows its overall rating from each location" do
     locations = [location_1, location_2, location_3]
     expect(locations).to have_overall_rating(16)
+  end
+
+  it "knows how to calculate the time to the next location" do
+    expect(itinerary.time_to_next_location(the_big_d)).to eq 5
   end
 
 end
