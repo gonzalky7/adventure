@@ -11,4 +11,9 @@ class Itinerary < ApplicationRecord
     destination = [@next_location.latitude,@next_location.longitude]
     current_location.distance_to(destination)
   end
+
+  def time_to_next_location(distance_big_dependancy)
+    distance_big_dependancy.execute
+  end
+
 end
