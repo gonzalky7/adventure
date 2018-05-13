@@ -59,8 +59,8 @@ RSpec.describe Itinerary do
   end
 
   it "knows how to calculate the time to the next location with stub" do
-    big_dependancy_twin = object_double(DistanceBigDependancy.new)
-    big_dependancy_twin.stub(:execute) { 5 }
+    big_dependancy_twin = double()
+    allow(big_dependancy_twin).to receive(:execute).and_return(5)
     expect(itinerary.time_to_next_location(big_dependancy_twin)).to eq 5
   end
 
