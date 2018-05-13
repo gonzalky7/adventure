@@ -17,6 +17,7 @@ RSpec.describe Itinerary do
                                             rating: 1)
 
   let(:the_big_d) {DistanceBigDependancy.new}
+  let(:the_big_fake_d) {FakeBigDependancy.new}
 
   it "knows how to calculate distance between two locations" do
     itinerary.current_location = location_1
@@ -56,7 +57,13 @@ RSpec.describe Itinerary do
   end
 
   it "knows how to calculate the time to the next location" do
-    expect(itinerary.time_to_next_location(the_big_d)).to eq 5
+    expect(itinerary.time_to_next_location(the_big_fake_d)).to eq 5
+  end
+
+  it "knows how to calculate the time to the next location with stub" do
+    big_dependancy_twin = double()
+    allow(big_dependancy_twin).to receive(:execute).and_return(5)
+    expect(itinerary.time_to_next_location(big_dependancy_twin)).to eq 5
   end
 
   # it "original slow test: rating big dependency" do
