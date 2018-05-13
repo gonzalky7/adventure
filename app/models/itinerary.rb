@@ -16,4 +16,7 @@ class Itinerary < ApplicationRecord
     distance_big_dependancy.execute
   end
 
+  def calculations_of_ratings(rating_big_dependency)
+    rating_big_dependency.execute
+  end
 end

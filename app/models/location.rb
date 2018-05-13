@@ -16,4 +16,5 @@ class Location < ApplicationRecord
     self.point_of_interests << point_of_interest
   end
 
+
 end

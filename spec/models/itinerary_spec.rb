@@ -17,6 +17,7 @@ RSpec.describe Itinerary do
                                             rating: 1)
 
   let(:the_big_d) {DistanceBigDependancy.new}
+
   it "knows how to calculate distance between two locations" do
     itinerary.current_location = location_1
     itinerary.next_location = location_2
@@ -58,4 +59,21 @@ RSpec.describe Itinerary do
     expect(itinerary.time_to_next_location(the_big_d)).to eq 5
   end
 
+  # it "original slow test: rating big dependency" do
+  #   expect(itinerary.calculations_of_ratings(big_dependency)).to eq 5
+  # end
+
+  let(:big_dependency) {RatingBigDependency.new}
+  let(:fake) {FakeRatingBigDependency.new}
+
+  it "can create a double: rating big dependency" do
+    stub = Itinerary.new()
+    big_depend = double(:big_dependency, execute: 5)
+    result = stub.calculations_of_ratings(big_depend)
+    expect(result).to eq 5
+  end
+
+  it "passing fake to method: rating" do
+    expect(itinerary.calculations_of_ratings(fake)).to eq 5
+  end
 end
